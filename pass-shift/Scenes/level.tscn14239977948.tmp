@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cmnkxi26gywdh"]
+
+[ext_resource type="Script" uid="uid://dqt0uukagnthe" path="res://Scripts/control.gd" id="1_6phgx"]
+[ext_resource type="PackedScene" uid="uid://d0u3evrqitji1" path="res://Scenes/player.tscn" id="1_tumq0"]
+[ext_resource type="Script" uid="uid://dd6uvv3cb5ewy" path="res://Scripts/obstacle_spawner.gd" id="4_81xng"]
+[ext_resource type="Texture2D" uid="uid://cyvg5h7mcp3ys" path="res://Graphics/New Piskel-1.png.png" id="4_wqkje"]
+
+[node name="Level" type="Node2D" unique_id=1181778664]
+script = ExtResource("1_6phgx")
+
+[node name="Player" parent="." unique_id=2038262713 instance=ExtResource("1_tumq0")]
+z_index = 999
+position = Vector2(0, -30)
+
+[node name="ObstacleSpawner" type="Node2D" parent="." unique_id=1317012389]
+position = Vector2(-100, 50)
+script = ExtResource("4_81xng")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=500806680]
+position = Vector2(703, 282)
+
+[node name="Background" type="Node2D" parent="." unique_id=1091332746]
+z_index = -5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1746014444]
+position = Vector2(576, 432.41602)
+scale = Vector2(36, 27.036499)
+texture = ExtResource("4_wqkje")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=1322111558]
+position = Vector2(576, -432.58398)
+scale = Vector2(36, 27.036499)
+texture = ExtResource("4_wqkje")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=1487717334]
+position = Vector2(576, 1297)
+scale = Vector2(36, 27.036)
+texture = ExtResource("4_wqkje")

@@ -11,7 +11,7 @@ radius = 27.073973
 [node name="Player" type="CharacterBody2D" parent="." unique_id=542766402]
 position = Vector2(562, 520)
 script = ExtResource("1_cvnsp")
-move_distance = 80
+move_distance = 108
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=198811507]
 scale = Vector2(0.2, 0.2)

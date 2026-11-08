@@ -31,7 +31,7 @@ func spawn_obstacle():
 	obstacle.direction = direction
 	
 	obstacle.global_position = spawn_point
-	get_parent().add_child.call_deferred(obstacle)
+	add_child.call_deferred(obstacle)
 	
 	var area = obstacle.get_node("Obstacle")
 	area.body_entered.connect(player._on_obstacle_body_entered)
