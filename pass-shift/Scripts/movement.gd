@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # VARIABLES
-var move_distance = 100
+@export var move_distance = 70
 var move_speed = 1200
 var moving = false
 var hit_obstacle = false

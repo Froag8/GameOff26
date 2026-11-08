@@ -1,21 +1,23 @@
 [gd_scene format=3 uid="uid://dfjruceqpt4g0"]
 
-[ext_resource type="Script" uid="uid://dh04snoh0pmfk" path="res://Scripts/control.gd" id="1_2fo0r"]
-[ext_resource type="Texture2D" uid="uid://cesryvv5riflc" path="res://Graphics/icon.svg" id="2_8n7qf"]
+[ext_resource type="Script" uid="uid://csn2hkadlgmoe" path="res://Scripts/obstacle_move.gd" id="1_2fo0r"]
+[ext_resource type="Texture2D" uid="uid://d4fgumm18vxm2" path="res://Graphics/car1red.png" id="2_2fo0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6h85"]
+size = Vector2(7.4943056, 12.457308)
 
 [node name="Obstacle1" type="Node2D" unique_id=419647944]
-
-[node name="Obstacle" type="Area2D" parent="." unique_id=1123308351]
-position = Vector2(582, 116)
 script = ExtResource("1_2fo0r")
 
+[node name="Obstacle" type="Area2D" parent="." unique_id=1123308351]
+
 [node name="Sprite2D" type="Sprite2D" parent="Obstacle" unique_id=266714156]
-scale = Vector2(3, 1)
-texture = ExtResource("2_8n7qf")
+rotation = 1.5707964
+scale = Vector2(7, 7)
+texture = ExtResource("2_2fo0r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle" unique_id=1699575991]
+position = Vector2(0, -0.5)
 scale = Vector2(18.680847, 6.341659)
 shape = SubResource("RectangleShape2D_j6h85")
 

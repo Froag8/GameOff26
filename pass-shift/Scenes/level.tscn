@@ -1,14 +1,32 @@
 [gd_scene format=3 uid="uid://cmnkxi26gywdh"]
 
-[ext_resource type="Script" uid="uid://dmrre400bkpyi" path="res://Scripts/main.gd" id="1_6phgx"]
+[ext_resource type="Script" uid="uid://dqt0uukagnthe" path="res://Scripts/control.gd" id="1_6phgx"]
 [ext_resource type="PackedScene" uid="uid://d0u3evrqitji1" path="res://Scenes/player.tscn" id="1_tumq0"]
-[ext_resource type="Script" uid="uid://dj7yrgdpgvh8u" path="res://Scenes/obstacle_spawner.gd" id="4_81xng"]
+[ext_resource type="Script" uid="uid://dd6uvv3cb5ewy" path="res://Scripts/obstacle_spawner.gd" id="4_81xng"]
+[ext_resource type="Texture2D" uid="uid://cdm6h0igaf777" path="res://Graphics/car3red.png" id="4_wqkje"]
 
 [node name="Level" type="Node2D" unique_id=1181778664]
 script = ExtResource("1_6phgx")
 
 [node name="Player" parent="." unique_id=2038262713 instance=ExtResource("1_tumq0")]
+z_index = 999
 
 [node name="ObstacleSpawner" type="Node2D" parent="." unique_id=1317012389]
-position = Vector2(975, 130)
+position = Vector2(-100, 50)
 script = ExtResource("4_81xng")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=500806680]
+position = Vector2(703, 282)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1060667641]
+position = Vector2(26, -24.5)
+scale = Vector2(5.3333335, 3.45)
+texture = ExtResource("4_wqkje")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1980467559]
+position = Vector2(1406, 564)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=1083547837]
+position = Vector2(26, -24.5)
+scale = Vector2(5.3333335, 3.45)
+texture = ExtResource("4_wqkje")
