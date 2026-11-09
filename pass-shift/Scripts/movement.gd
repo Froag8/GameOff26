@@ -16,6 +16,7 @@ func _process(_delta):
 
 	if Input.is_action_just_pressed("ui_up"):
 		direction = Vector2.UP
+		get_node("../..").move_up()
 
 	elif Input.is_action_just_pressed("ui_down"):
 		direction = Vector2.DOWN

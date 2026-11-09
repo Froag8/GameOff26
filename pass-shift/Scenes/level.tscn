@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dqt0uukagnthe" path="res://Scripts/control.gd" id="1_6phgx"]
 [ext_resource type="PackedScene" uid="uid://d0u3evrqitji1" path="res://Scenes/player.tscn" id="1_tumq0"]
-[ext_resource type="Script" uid="uid://dd6uvv3cb5ewy" path="res://Scripts/obstacle_spawner.gd" id="4_81xng"]
+[ext_resource type="PackedScene" uid="uid://bjy00waohnlep" path="res://Scenes/obstacle_spawner.tscn" id="3_wqkje"]
 [ext_resource type="Texture2D" uid="uid://cyvg5h7mcp3ys" path="res://Graphics/New Piskel-1.png.png" id="4_wqkje"]
+[ext_resource type="Script" uid="uid://c83aky8acwkmg" path="res://Scripts/lane_spawner.gd" id="5_0f350"]
 
 [node name="Level" type="Node2D" unique_id=1181778664]
 script = ExtResource("1_6phgx")
@@ -12,12 +13,8 @@ script = ExtResource("1_6phgx")
 z_index = 999
 position = Vector2(0, -30)
 
-[node name="ObstacleSpawner" type="Node2D" parent="." unique_id=1317012389]
+[node name="ObstacleSpawner" parent="." unique_id=306318974 instance=ExtResource("3_wqkje")]
 position = Vector2(-100, -100)
-script = ExtResource("4_81xng")
-
-[node name="Node2D" type="Node2D" parent="." unique_id=500806680]
-position = Vector2(1194, -17)
 
 [node name="Background" type="Node2D" parent="." unique_id=1091332746]
 z_index = -5
@@ -36,3 +33,6 @@ texture = ExtResource("4_wqkje")
 position = Vector2(576, 1297)
 scale = Vector2(36, 27.036)
 texture = ExtResource("4_wqkje")
+
+[node name="LaneSpawner" type="Node2D" parent="." unique_id=855015256]
+script = ExtResource("5_0f350")
